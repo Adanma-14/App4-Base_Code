@@ -33,28 +33,28 @@ The known issues are that you can not definitively diagnosis, you can only calcu
 
 
   <script> //script contains scripting statements for common java use for image manipulation, form validation and dynamic changes
-        var allergy_count = 0; //this allows the allergy count to begin at zero
-        var cold_count = 0; //this allows the cold count to begin at zero
-	var allergyPercent = 0; //this allows the allergy percent to begin at zero
-	var coldPercent = 0; //this allows the cold percent to begin at zero
+        var sinus_count = 0; //this allows the sinus count to begin at zero
+        var COVID_count = 0; //this allows the COVID count to begin at zero
+	var sinusPercent = 0; //this allows the sinus percent to begin at zero
+	var COVIDPercent = 0; //this allows the COVID percent to begin at zero
 	var resultText = document.getElementById("results"); // intended for the results page
 
 
-        function allergyAdd(){ //this function describes the way the allergy count will be calculated
-            allergy_count = allergy_count + 1; //this function adds 1 to the allergy value
+        function sinusAdd(){ //this function describes the way the sinus count will be calculated
+            sinus_count = sinus_count + 1; //this function adds 1 to the sinus value
 
         }
 
-        function coldAdd(){ //this function describes the way the cold count will be calculated
-            cold_count = cold_count + 1; //this function adds 1 to the cold value
+        function COVIDAdd(){ //this function describes the way the COVID count will be calculated
+            COVID_count = COVID_count + 1; //this function adds 1 to the COVID value
 
         }	
 	 function results(){ //this function calculates the total result percentage
-		allergyPercent = (allergy_count/4) *100; //this variable determines the allergy percent by adding the allergy count over the total 
-		coldPercent = (cold_count/4) *100; //this variable determines the cold percent by adding the cold count over the total
+		sinusPercent = (sinus_count/4) *100; //this variable determines the sinus percent by adding the sinus count over the total 
+		COVIDPercent = (COVID_count/4) *100; //this variable determines the COVID percent by adding the COVID count over the total
 		 var resultText = document.getElementById("results"); //this variable determines the result text 
-           	resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "<br> Probability it is a cold = " + coldPercent; 
-        } //the result text calculates the probability of allergies and probability of cold by using the variables for allergypercent and coldpercent and dividing by 6 then multiplying by 100
+           	resultText.innerHTML = "Probability it is a sinus infection = " + sinusPercent + "<br> Probability it is COVID-19 = " + COVIDPercent; 
+        } //the result text calculates the probability of a sinus infection and probability of COVID-19 by using the variables for sinuspercent and COVIDpercent and dividing by 6 then multiplying by 100
 	
 
   </script> 
