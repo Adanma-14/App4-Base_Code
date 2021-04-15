@@ -55,8 +55,8 @@ The known issues are that you can not definitively diagnosis, you can only calcu
 		 var resultText = document.getElementById("results"); //this variable determines the result text 
            	resultText.innerHTML = "Probability it is a sinus infection = " + sinusPercent + "<br> Probability it is COVID-19 = " + COVIDPercent; 
         } //the result text calculates the probability of a sinus infection and probability of COVID-19 by using the variables for sinuspercent and COVIDpercent and dividing by 6 then multiplying by 100
-//code to onload image onto canvas
-	 function printImage() {
+
+	 function printImage() {//code to onload image onto canvas
          var canvas = document.getElementById("myCanvas"); 
          var context = canvas.getContext("2d");
 	 city.src = "https://www.webmd.com/allergies/sinusitis-and-sinus-infection" //URL for image src 
