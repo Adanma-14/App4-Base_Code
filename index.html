@@ -51,8 +51,8 @@ The known issues are that you can not definitively diagnosis, you can only calcu
         }	
 	 function results(){ //this function calculates the total result percentage
 	    var count = sinus_count + covid_count; 
-	    var sinusPercent = (sinus_count/4) *100; //this variable determines the sinus percent by adding the sinus count over the total 
-	    var covidPercent = (covid_count/4) *100; //this variable determines the COVID percent by adding the COVID count over the total
+	    var sinusPercent = (sinus_count/count) * 100; //this variable determines the sinus percent by adding the sinus count over the total 
+	    var covidPercent = (covid_count/count) * 100; //this variable determines the COVID percent by adding the COVID count over the total
 	    var resultText = document.getElementById("results"); //this variable determines the result text 
             resultText.innerHTML = "Probability it is a sinus infection = " + sinusPercent + "<br> Probability it is COVID-19 = " + covidPercent; 
         } //the result text calculates the probability of a sinus infection and probability of COVID-19 by using the variables for sinuspercent and COVIDpercent and dividing by 6 then multiplying by 100
