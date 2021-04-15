@@ -35,18 +35,17 @@ The known issues are that you can not definitively diagnosis, you can only calcu
   <script> //script contains scripting statements for common java use for image manipulation, form validation and dynamic changes
         var sinus_count = 0; //this allows the sinus count to begin at zero
         var covid_count = 0; //this allows the COVID count to begin at zero
-	var sinusPercent = 0; //this allows the sinus percent to begin at zero
-	var covidPercent = 0; //this allows the COVID percent to begin at zero
-	var resultText = document.getElementById("results"); // intended for the results page
-
+	
 
         function sinusAdd(){ //this function describes the way the sinus count will be calculated
             sinus_count = sinus_count + 1; //this function adds 1 to the sinus value
+		alert(sinus_count); //this sends an alert if an answer added to the sinus count 
 
         }
 
         function covidAdd(){ //this function describes the way the COVID count will be calculated
             covid_count = covid_count + 1; //this function adds 1 to the COVID value
+		alert(covid_count); //this sends an alert if an answer added to the covid count 
 
         }	
 	 function results(){ //this function calculates the total result percentage
@@ -55,6 +54,7 @@ The known issues are that you can not definitively diagnosis, you can only calcu
 	    var covidPercent = (covid_count/count) * 100; //this variable determines the COVID percent by adding the COVID count over the total
 	    var resultText = document.getElementById("results"); //this variable determines the result text 
             resultText.innerHTML = "Probability it is a sinus infection = " + sinusPercent + "<br> Probability it is COVID-19 = " + covidPercent; 
+		 
         } //the result text calculates the probability of a sinus infection and probability of COVID-19 by using the variables for sinuspercent and COVIDpercent and dividing by 6 then multiplying by 100
 
 	 function printImage() {//code to onload image onto canvas
